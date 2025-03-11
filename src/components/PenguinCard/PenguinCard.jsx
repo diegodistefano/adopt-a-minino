@@ -1,6 +1,6 @@
 import React from "react";
 
-const PenguinCard = () =>{
+const PenguinCard = () => {
     return <h2>Penguin Card</h2>;
 };
 

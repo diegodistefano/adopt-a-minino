@@ -10,7 +10,7 @@ const HomePage = () => {
       <h2>Esta es la home page</h2>
       <PenguinSlide />
       <PenguinCard />
-      <PenguinButton />
+      <PenguinButton text='adoptame' onClick={() => { console.log('hola'); }} />
     </>
   );
 };

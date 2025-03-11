@@ -1,0 +1,19 @@
+.btn {
+    margin: 2%;
+}
+
+.button-primary {
+    background-color: rgb(49, 94, 179);
+}
+
+.button-danger {
+    background-color: red;
+}
+
+.button-alert {
+    background-color: orange;
+}
+
+.button-confirmation {
+    background-color: green;
+}

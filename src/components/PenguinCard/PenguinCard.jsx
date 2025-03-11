@@ -1,8 +1,7 @@
 import React from "react";
 
 const PenguinCard = () =>{
-    <h2>Prueba Card</h2>
-    return <card>Penguin</card>;
+    return <h2>Penguin Card</h2>;
 };
 
 export default PenguinCard;

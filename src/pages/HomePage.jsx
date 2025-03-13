@@ -9,8 +9,7 @@ const HomePage = () => {
     <>
       <h2>Esta es la home page</h2>
       <PenguinSlide />
-      <PenguinCard />
-      <PenguinButton text='adoptame' onClick={() => { console.log('hola'); }} />
+      <PenguinCard urlImagen = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" tipo = "planta" nombre= "Pinguino de planta"/>
     </>
   );
 };

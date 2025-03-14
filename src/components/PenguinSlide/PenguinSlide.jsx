@@ -27,21 +27,29 @@ const PenguinSlide = () => {
   }, []);
 
   const nextImages = () => {
-    console.log(penguinDisplayed);
     setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));
     setIndexImage(indexImage + 3);
-    console.log(penguinDisplayed);
+  }
+
+  const previousImages = () => {
+    // const index = indexImage - 3;
+    setPenguinDisplayed(dataPenguin.slice(indexImage - 3, indexImage));
+    setIndexImage(indexImage - 3);
   }
 
   return (
     <div className="container-carrusel">
+      {indexImage > 3 ? <PenguinButton text="previous" onClick={previousImages}/> : "" }
+
       {penguinDisplayed.map((penguin) => (
         <>
         <PenguinCard urlImagen = {penguin.url} tipo = "planta" nombre= "Pinguino de planta"/>
         </>
       ))}
-      <PenguinButton text="next" onClick={nextImages}/>
+      {indexImage < (dataPenguin.length) ? <PenguinButton text="next" onClick={nextImages}/> : "" }
+
     </div>
+  
   );
 };
 

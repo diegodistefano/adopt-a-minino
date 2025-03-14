@@ -1,9 +1,12 @@
 .btn {
     margin: 2%;
+    border-radius: 5px;
+    border: solid 2px #b7187a;
+    cursor: pointer;
 }
 
 .button-primary {
-    background-color: rgb(49, 94, 179);
+    background-color: #d6469f;
 }
 
 .button-danger {

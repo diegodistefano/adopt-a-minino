@@ -1,0 +1,23 @@
+nav{
+    margin-top: 0;
+    padding: 0 20px;
+    background-color: var(--secundary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'DynaPuff', system-ui; 
+
+}
+
+img{
+    height: 60px;
+}
+
+.navlinks{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    font-family: 'DynaPuff', system-ui; 
+
+    
+}

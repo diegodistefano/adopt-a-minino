@@ -1,13 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import PenguinButton from "../PenguinButton/PenguinButton";
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <nav>
-      <Link to="/"><PenguinButton text='Home' />    </Link>
-      <NavLink to="/adopt">Adoptame   </NavLink>
+      <img src="./public/favicon.png" />
+      <div className="navlinks">
+        <Link to="/">
+          <PenguinButton text="HOME"/>{" "}
+        </Link>
+        <NavLink to="/adopt"><PenguinButton text="ADÓPTAME" color="btn-nav" />{" "} </NavLink>
+      </div>
     </nav>
   );
-}
+};
 
 export default NavBar;

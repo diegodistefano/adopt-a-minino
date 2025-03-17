@@ -11,6 +11,11 @@
     --tertiary-color: #4A5759;
     --cuaternary-color:  #DEDBD2;
     --quinary-color: #B0C4B1;
+}
+#root{
+    margin-top: 0px;
+    width: 100%;
+    
 } 
 body{
     
@@ -20,7 +25,7 @@ body{
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
 }
 
@@ -32,17 +37,14 @@ body{
     text-align: center;
     width: 100%;
     height: 100%;
+    
 }
 
 .container-home h2 {
     font-size: 2rem;
-    margin: 0 auto;
+    margin: 1% auto;
     text-align: center;
     width: 100%;
 }
 
-h1
-{
-    font-family: "DynaPuff", system-ui;
-}
 

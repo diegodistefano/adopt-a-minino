@@ -1,9 +1,9 @@
 import React from 'react';
 import './PenguinButton.css';
 
-const PenguinButton = ({ text, onClick = () => { }, color = "primary" }) => {
+const PenguinButton = ({ text, onClick = () => { }, color = "button-primary btn" }) => {
   return (
-    <button className={`btn button-${color}`} onClick={onClick}>{text}</button>
+    <button className={`${color}`} onClick={onClick}>{text}</button>
   )
 };
 

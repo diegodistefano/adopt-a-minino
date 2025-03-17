@@ -39,9 +39,11 @@ const PenguinSlide = () => {
   return (
     <div className="container-buttons">
       {indexImage > 3 ? (
-        <PenguinButton text="previous" onClick={previousImages} />
+        <PenguinButton text={<i class="fa-solid fa-caret-left"></i>} onClick={previousImages} color="button-arrows btn" />
       ) : (
-        ""
+        <div className="fill-button">
+          <i class="fa-solid fa-caret-left"></i>
+        </div>
       )}
       <div className="container-carrusel">
         {penguinDisplayed.map((penguin) => (
@@ -55,9 +57,11 @@ const PenguinSlide = () => {
         ))}
       </div>
       {indexImage < dataPenguin.length ? (
-        <PenguinButton text="next" onClick={nextImages} />
+        <PenguinButton text={<i class="fa-solid fa-caret-right"></i>} onClick={nextImages} color="button-arrows btn" />
       ) : (
-        ""
+        <div className="fill-button">
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
       )}
     </div>
   );

@@ -24,7 +24,7 @@ const PenguinSlide = () => {
       return;
     }
     loadData();
-  }, [indexImage]);
+  }, []);
 
   const nextImages = () => {
     setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));

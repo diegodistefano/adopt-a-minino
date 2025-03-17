@@ -6,7 +6,7 @@
   min-width: 200px;
   min-height: 260px;
   border-radius: 8px;
-  background-color: #2d868e;
+  background-color: var(--primary-color);
   border: 1px solid black;
   position: relative;
   margin: 10px;

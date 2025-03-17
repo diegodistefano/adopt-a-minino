@@ -1,12 +1,20 @@
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+:root{
+    --primary-color: #F7E1D7;
+    --secundary-color: #EDAFB8; 
+    --tertiary-color: #4A5759;
+    --cuaternary-color:  #DEDBD2;
+    --quinary-color: #B0C4B1;
+} 
 body{
-    font-family: "Roboto Mono", monospace;
-    background-color: #f0f0f0;
+    
+    background-color: var(--primary-color);
     color: #333;
     width: 100%;
     min-height: 100vh;
@@ -32,3 +40,9 @@ body{
     text-align: center;
     width: 100%;
 }
+
+h1
+{
+    font-family: "DynaPuff", system-ui;
+}
+

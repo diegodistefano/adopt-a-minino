@@ -17,10 +17,9 @@ const PenguinSlide = () => {
 
       setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));
       setIndexImage(indexImage + 3);
-      
     };
 
-    if(indexImage > 0){
+    if (indexImage > 0) {
       return;
     }
     loadData();
@@ -29,27 +28,38 @@ const PenguinSlide = () => {
   const nextImages = () => {
     setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));
     setIndexImage(indexImage + 3);
-  }
+  };
 
   const previousImages = () => {
     // const index = indexImage - 3;
     setPenguinDisplayed(dataPenguin.slice(indexImage - 6, indexImage - 3));
     setIndexImage(indexImage - 3);
-  }
+  };
 
   return (
-    <div className="container-carrusel">
-      {indexImage > 3 ? <PenguinButton text="previous" onClick={previousImages}/> : "" }
-
-      {penguinDisplayed.map((penguin) => (
-        <>
-        <PenguinCard urlImagen = {penguin.url} tipo = "planta" nombre= "Pinguino de planta"/>
-        </>
-      ))}
-      {indexImage < (dataPenguin.length) ? <PenguinButton text="next" onClick={nextImages}/> : "" }
-
+    <div className="container-buttons">
+      {indexImage > 3 ? (
+        <PenguinButton text="previous" onClick={previousImages} />
+      ) : (
+        ""
+      )}
+      <div className="container-carrusel">
+        {penguinDisplayed.map((penguin) => (
+          <>
+            <PenguinCard
+              urlImagen={penguin.url}
+              tipo="planta"
+              nombre="Pinguino de planta"
+            />
+          </>
+        ))}
+      </div>
+      {indexImage < dataPenguin.length ? (
+        <PenguinButton text="next" onClick={nextImages} />
+      ) : (
+        ""
+      )}
     </div>
-  
   );
 };
 

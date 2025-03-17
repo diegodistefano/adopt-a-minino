@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
-    width: 30%;
-    background-color: #5ce99b;
+    min-width: 30%;
+    background-color: var(--secundary-color);
+}
+
+.container-buttons{
+    display: flex;
 }

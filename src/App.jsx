@@ -4,12 +4,12 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import HomePage from "./pages/HomePage";
 import AdoptPage from "./pages/AdoptPage";
+import { ThemeProvider } from "./components/ThemeContext/ThemeContext";
 
 function App() {
-
   return (
-    <>
-      <header >
+    <ThemeProvider>
+      <header>
         <NavBar />
       </header>
       <div>
@@ -18,7 +18,7 @@ function App() {
           <Route path="/adopt" element={<AdoptPage />} />
         </Routes>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
 

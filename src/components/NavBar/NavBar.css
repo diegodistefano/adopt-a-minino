@@ -20,3 +20,41 @@ nav img {
     width: 20%;
     font-family: 'DynaPuff', system-ui;
 }
+
+#toggleSlider {
+    width: 60px;
+    height: 30px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleSlider:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+#toggleSlider:checked:before {
+    transform: translateX(30px);
+}
+
+#toggleSlider:focus {
+    outline: none;
+}
+
+#sliderLabel {
+    margin-left: 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+}

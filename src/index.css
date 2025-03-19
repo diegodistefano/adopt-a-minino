@@ -15,10 +15,17 @@
     font-style: normal;
 }
 
+.dark-mode {
+    --primary-color: #cd6682;
+    --secundary-color: #f59ca9;
+    --tertiary-color: #374142;
+    --cuaternary-color: #6d6b65;
+    --quinary-color: #616c61;
+}
+
 #root {
     margin-top: 0px;
     width: 100%;
-
 }
 
 body {
@@ -29,7 +36,6 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     text-align: center;
 }
 
@@ -41,7 +47,6 @@ body {
     text-align: center;
     width: 100%;
     height: 100%;
-
 }
 
 .container-home h2 {

@@ -1,0 +1,43 @@
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--cuaternary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--tertiary-color);
+  text-align: left;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: var(--secundary-color);
+  outline: none;
+}
+
+p {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  text-align: left;
+}

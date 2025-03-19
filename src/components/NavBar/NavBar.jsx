@@ -5,12 +5,12 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav>
-      <img src="./public/favicon.png" />
-      <div className="navlinks">
         <Link to="/">
-          <PenguinButton text="HOME"/>{" "}
+          <PenguinButton text={<img src="./public/favicon.png" />} color="btn btn-logo " />{" "}
         </Link>
-        <NavLink to="/adopt"><PenguinButton text="ADÓPTAME" color="btn-nav" />{" "} </NavLink>
+      <div className="navlinks">
+        <NavLink to="/adopt"><PenguinButton text="ADÓPTAME" color="btn-nav btn" />{" "} </NavLink>
+        <NavLink to="/favorite"><PenguinButton text="FAVORITO" color="btn-nav btn" />{" "} </NavLink>
       </div>
     </nav>
   );

@@ -1,8 +1,13 @@
 import React from "react";
+import Form from "../components/Form/Form";
 
 const AdoptPage = () => {
 
-    return <h2>Esta es la Adopt page</h2>;
+    return (
+    <>
+        <Form/>
+    </>
+    );
 };
 
 export default AdoptPage;

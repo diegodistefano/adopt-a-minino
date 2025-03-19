@@ -11,12 +11,16 @@
     --tertiary-color: #4A5759;
     --cuaternary-color:  #DEDBD2;
     --quinary-color: #B0C4B1;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 #root{
     margin-top: 0px;
     width: 100%;
     
 } 
+
 body{
     
     background-color: var(--primary-color);

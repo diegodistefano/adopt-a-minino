@@ -4,9 +4,9 @@ import Form from "../components/Form/Form";
 const AdoptPage = () => {
 
     return (
-    <>
-        <Form/>
-    </>
+        <>
+            <Form />
+        </>
     );
 };
 

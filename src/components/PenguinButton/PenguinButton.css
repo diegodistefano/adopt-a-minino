@@ -13,10 +13,10 @@
     background-color: var(--secundary-color);
 }
 
-.button-arrows{
+.button-arrows {
     background-color: var(--primary-color);
     border: none;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .button-arrows i {

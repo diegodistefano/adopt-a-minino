@@ -11,7 +11,7 @@ function Form() {
         <div className="form-container">
             <h1>Adopt a Minino</h1>
             <form onSubmit={handleSubmit((data) => console.log(data))}>
-                
+
                 <label htmlFor="name">Name</label>
                 <input
                     id="name"

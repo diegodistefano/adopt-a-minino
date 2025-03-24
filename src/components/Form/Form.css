@@ -41,3 +41,31 @@ p {
   margin: 0;
   text-align: left;
 }
+
+#contenedor-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+.ventana-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 120px 180px;
+}
+
+.contenido-popup {
+  text-align: center;
+}
+
+.tutorial{
+  text-align: center;
+}

@@ -7,22 +7,12 @@ import PenguinButton from "../PenguinButton/PenguinButton.jsx";
 
 const PenguinSlide = () => {
   const [dataPenguin, setDataPenguin] = useState([]);
-  // const [idPenguin, setIdPenguin] = useState([]);
   const [indexImage, setIndexImage] = useState(0);
   const [penguinDisplayed, setPenguinDisplayed] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
       const dataPenguin = await getPenguins();
-      console.log(dataPenguin);
-      // const idArray = [];
-      // dataPenguin.map((penguin) => (
-      //       idArray.push(penguin.id)
-      // ))
-      // console.log(idArray);
-
-
-
       setDataPenguin(dataPenguin);
       setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));
       setIndexImage(indexImage + 3);

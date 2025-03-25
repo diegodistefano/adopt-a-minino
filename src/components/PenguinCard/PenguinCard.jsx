@@ -1,26 +1,55 @@
 import React from "react";
 import "./PenguinCard.css";
 import PenguinButton from "../PenguinButton/PenguinButton";
-
+import { useState } from "react";
 
 
 const PenguinCard = ({ urlImagen, id }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  const checkFav = () => {
+    if (localStorage.getItem('favorites') === null) {
+      localStorage.setItem('favorites', JSON.stringify({}));
+    }
 
-  const addFavorite = () => { 
-    const cardInfo = {[id]: urlImagen};
-    console.log(cardInfo);
-    // localStorage.setItem("favorites", JSON.stringify(cardInfo));
+    if ((JSON.parse(localStorage.getItem('favorites'))[id] !== undefined) && !isFavorite) {
+      setIsFavorite(true);
+    }
+  }
+
+  checkFav();
+  const addFavorite = () => {
+    if (localStorage.getItem('favorites') === null) {
+      localStorage.setItem('favorites', JSON.stringify({}));
+    }
+
+    const favorites = JSON.parse(localStorage.getItem('favorites'));
+    favorites[id] = urlImagen;
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    console.log('bbb');
+    setIsFavorite(true);
+  };
+
+  const removeFavorite = () => {
+    console.log('aaa');
+    setIsFavorite(false);
   };
 
   return (
     <div className={`card`}>
       <div className="card-favorite">
-        <PenguinButton
-          color="btn-favorite"
-          text={<i class="fa-solid fa-heart"></i>}
-          // text={`${favoritePenguin === false ? '<i class="fa-regular fa-heart"></i>' : '<i class="fa-solid fa-heart"></i>'}`}
-          onClick={addFavorite}
-        />
+        {isFavorite ?
+          <PenguinButton
+            color="btn-favorite"
+            text={<i class="fa-solid fa-heart"></i>}
+            onClick={removeFavorite}
+          />
+          :
+          <PenguinButton
+            color="btn-favorite"
+            text={<i class="fa-regular fa-heart"></i>}
+            onClick={addFavorite}
+          />
+        }
       </div>
       <img src={urlImagen} />
       <PenguinButton

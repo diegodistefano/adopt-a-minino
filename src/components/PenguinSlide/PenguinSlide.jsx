@@ -48,8 +48,6 @@ const PenguinSlide = () => {
           <>
             <PenguinCard
               urlImagen={penguin.url}
-              tipo="planta"
-              nombre="Pinguino de planta"
             />
           </>
         ))}

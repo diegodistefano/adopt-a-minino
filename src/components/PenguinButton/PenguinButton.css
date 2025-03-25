@@ -6,7 +6,6 @@
     cursor: pointer;
     padding: 5px;
     font-weight: 700;
-
 }
 
 .btn-logo {
@@ -26,4 +25,13 @@
 
 .button-primary {
     background-color: var(--secundary-color);
+}
+
+.btn-favorite {
+    /* position: fixed; */
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    /* z-index: 1000; */
 }

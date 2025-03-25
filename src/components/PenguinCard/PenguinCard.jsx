@@ -1,63 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./PenguinCard.css";
-import PenguinButton from "../PenguinButton/PenguinButton";
-import { useState } from "react";
+import PenguinButton from "../PenguinButton/PenguinButton.jsx";
 
-
-const PenguinCard = ({ urlImagen, id }) => {
+const PenguinCard = ({ urlImagen, id, favorites, setFavorites }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const checkFav = () => {
-    if (localStorage.getItem('favorites') === null) {
-      localStorage.setItem('favorites', JSON.stringify({}));
-    }
 
-    if ((JSON.parse(localStorage.getItem('favorites'))[id] !== undefined) && !isFavorite) {
-      setIsFavorite(true);
-    }
-  }
+  useEffect(() => {
+    setIsFavorite(favorites[id] !== undefined);
+  }, [favorites, id]);
 
-  checkFav();
   const addFavorite = () => {
-    if (localStorage.getItem('favorites') === null) {
-      localStorage.setItem('favorites', JSON.stringify({}));
-    }
-
-    const favorites = JSON.parse(localStorage.getItem('favorites'));
-    favorites[id] = urlImagen;
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    console.log('bbb');
-    setIsFavorite(true);
+    const newFavorites = { ...favorites, [id]: urlImagen };
+    localStorage.setItem("favorites", JSON.stringify(newFavorites));
+    setFavorites(newFavorites);
   };
 
   const removeFavorite = () => {
-    console.log('aaa');
-    setIsFavorite(false);
+    const newFavorites = { ...favorites };
+    delete newFavorites[id];
+    localStorage.setItem("favorites", JSON.stringify(newFavorites));
+    setFavorites(newFavorites);
   };
 
   return (
-    <div className={`card`}>
+    <div className="card">
       <div className="card-favorite">
-        {isFavorite ?
-          <PenguinButton
-            color="btn-favorite"
-            text={<i class="fa-solid fa-heart"></i>}
-            onClick={removeFavorite}
-          />
-          :
-          <PenguinButton
-            color="btn-favorite"
-            text={<i class="fa-regular fa-heart"></i>}
-            onClick={addFavorite}
-          />
-        }
+        <PenguinButton
+          color={isFavorite ? "btn-favorite active" : "btn-favorite"} // 🔥 Cambiamos la clase
+          text={<i className={isFavorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>}
+          onClick={isFavorite ? removeFavorite : addFavorite}
+        />
       </div>
-      <img src={urlImagen} />
-      <PenguinButton
-        text="Adoptame"
-        onClick={() => {
-          console.log("hola");
-        }}
-      />
+      <img src={urlImagen} alt="Penguin" />
+      <PenguinButton text="Adoptame" onClick={() => console.log("hola")} />
     </div>
   );
 };

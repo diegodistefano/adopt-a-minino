@@ -50,7 +50,7 @@ const PenguinSlide = () => {
             <PenguinCard
               urlImagen={penguin.url}
               id={penguin.id}
-              breed={penguin.categories[0].name}
+               name={penguin.categories === undefined? "Minino" : penguin.categories[0].name}
             />
           </>
         ))}

@@ -34,6 +34,8 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
     setIsFavorite(false);
   };
 
+  const shortDescription = description.split('.');
+
   return (
     <div className={`card`}>
       <div className="card-favorite">
@@ -53,7 +55,7 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
       </div>
       <img src={urlImagen} />
       <h3>{breed}</h3>
-      <h5>{description}</h5>
+      <h5>{shortDescription[0]}.</h5>
       <PenguinButton
         text="Adoptame"
         onClick={() => {

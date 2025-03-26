@@ -34,11 +34,14 @@ const PenguinSlide = () => {
     setIndexImage(indexImage - 3);
   };
 
-
   return (
     <div className="container-buttons">
       {indexImage > 3 ? (
-        <PenguinButton text={<i class="fa-solid fa-caret-left"></i>} onClick={previousImages} color="button-arrows btn" />
+        <PenguinButton
+          text={<i class="fa-solid fa-caret-left"></i>}
+          onClick={previousImages}
+          color="button-arrows btn"
+        />
       ) : (
         <div className="fill-button">
           <i class="fa-solid fa-caret-left"></i>
@@ -48,15 +51,34 @@ const PenguinSlide = () => {
         {penguinDisplayed.map((penguin) => (
           <>
             <PenguinCard
+              key={penguin.id}
               urlImagen={penguin.url}
               id={penguin.id}
-               name={penguin.categories === undefined? "Minino" : penguin.categories[0].name}
+              name={
+                penguin.categories === undefined
+                  ? "Minino"
+                  : penguin.categories[0].name
+              }
+              breed={
+                penguin.breeds[0] === undefined
+                  ? "Desconocida"
+                  : penguin.breeds[0].name
+              }
+              description={
+                penguin.breeds[0]=== undefined
+                  ? "Sin descripción"
+                  : penguin.breeds[0].description
+              }
             />
           </>
         ))}
       </div>
       {indexImage < dataPenguin.length ? (
-        <PenguinButton text={<i class="fa-solid fa-caret-right"></i>} onClick={nextImages} color="button-arrows btn" />
+        <PenguinButton
+          text={<i class="fa-solid fa-caret-right"></i>}
+          onClick={nextImages}
+          color="button-arrows btn"
+        />
       ) : (
         <div className="fill-button">
           <i class="fa-solid fa-caret-right"></i>

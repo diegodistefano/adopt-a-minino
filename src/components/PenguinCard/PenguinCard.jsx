@@ -23,11 +23,11 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
     }
 
     const favorites = JSON.parse(localStorage.getItem('favorites'));
-    favorites[id] = urlImagen;
+    favorites[id] = { 'urlImagen': urlImagen, 'breed': breed, 'description': description };
     localStorage.setItem('favorites', JSON.stringify(favorites));
     setIsFavorite(true);
   };
-  
+
   const removeFavorite = () => {
     const favorites = JSON.parse(localStorage.getItem('favorites'));
     delete favorites[id];

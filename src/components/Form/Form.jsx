@@ -29,12 +29,16 @@ function Form() {
     openPopup();
   };
 
+  const queryParams = new URLSearchParams(location.search);
+  const breed = queryParams.get("breed") || "a Minino"; 
+
+
   return (
     <div>
       {!isPopupOpen ? (
         <>
           <div className="form-container">
-            <h1>Adopt a Minino</h1>
+            <h1>Adopt {breed}</h1>
             <form onSubmit={handleSubmit(onValid)}>
               <label htmlFor="name">Name</label>
               <input

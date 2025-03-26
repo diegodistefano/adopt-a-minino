@@ -10,13 +10,13 @@ const PenguinCard = ({ urlImagen, id, favorites, setFavorites }) => {
   }, [favorites, id]);
 
   const addFavorite = () => {
-    const newFavorites = { ...favorites, [id]: urlImagen };
+    const newFavorites = { favorites, [id]: urlImagen };
     localStorage.setItem("favorites", JSON.stringify(newFavorites));
     setFavorites(newFavorites);
   };
 
   const removeFavorite = () => {
-    const newFavorites = { ...favorites };
+    const newFavorites = { favorites };
     delete newFavorites[id];
     localStorage.setItem("favorites", JSON.stringify(newFavorites));
     setFavorites(newFavorites);

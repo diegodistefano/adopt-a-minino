@@ -25,12 +25,13 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
     const favorites = JSON.parse(localStorage.getItem('favorites'));
     favorites[id] = urlImagen;
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    console.log('bbb');
     setIsFavorite(true);
   };
-
+  
   const removeFavorite = () => {
-    console.log('aaa');
+    const favorites = JSON.parse(localStorage.getItem('favorites'));
+    delete favorites[id];
+    localStorage.setItem('favorites', JSON.stringify(favorites));
     setIsFavorite(false);
   };
 

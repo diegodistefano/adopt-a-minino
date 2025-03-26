@@ -4,7 +4,7 @@ import PenguinButton from "../PenguinButton/PenguinButton";
 import { useState } from "react";
 
 
-const PenguinCard = ({ urlImagen, id, name, breed, description }) => {
+const PenguinCard = ({ urlImagen, id, breed, description }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const checkFav = () => {
     if (localStorage.getItem('favorites') === null) {
@@ -52,9 +52,8 @@ const PenguinCard = ({ urlImagen, id, name, breed, description }) => {
         }
       </div>
       <img src={urlImagen} />
-      <h3>{name}</h3>
-      <h6>{breed}</h6>
-      <p>{description}</p>
+      <h3>{breed}</h3>
+      <h5>{description}</h5>
       <PenguinButton
         text="Adoptame"
         onClick={() => {

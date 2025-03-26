@@ -54,11 +54,6 @@ const PenguinSlide = () => {
               key={penguin.id}
               urlImagen={penguin.url}
               id={penguin.id}
-              name={
-                penguin.categories === undefined
-                  ? "Minino"
-                  : penguin.categories[0].name
-              }
               breed={
                 penguin.breeds[0] === undefined
                   ? "Desconocida"

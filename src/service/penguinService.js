@@ -4,7 +4,6 @@ const URL_API = "https://api.thecatapi.com/v1/images/search?limit=10&include_bre
 
 
 export async function getPenguins() {
-  console.log(API_KEY);
     const response = await fetch(URL_API, {
       method: "GET",
       headers: {

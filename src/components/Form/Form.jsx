@@ -39,7 +39,7 @@ function Form() {
       {!isPopupOpen ? (
         <>
           <div className="form-container">
-            <h1>Adopt {breed}</h1>
+            <h1>Adopt {breed}</h1>    
             {image && <img src={image} alt={breed} className="adopt-image" />} 
             <form onSubmit={handleSubmit(onValid)}>
               <label htmlFor="name">Name</label>

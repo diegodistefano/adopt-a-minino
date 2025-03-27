@@ -6,9 +6,10 @@ const FavoritePage = () => {
   const [favoriteCards, setFavoriteCards] = useState([]);
 
   useEffect(() => {
+    
     const favorites = JSON.parse(localStorage.getItem("favorites")) ?? {};
     setFavoriteCards(favorites);
-  }, []);
+  }, [favoriteCards[id]]);
 
   return (
     <div className="container-favorite">

@@ -1,5 +1,6 @@
 import PenguinCard from "./../components/PenguinCard/PenguinCard";
 import { useState, useEffect } from "react";
+import "./page.css";
 
 const FavoritePage = () => {
   const [favoriteCards, setFavoriteCards] = useState([]);
@@ -10,7 +11,7 @@ const FavoritePage = () => {
   }, []);
   
   return (
-      <div>
+      <div className="container-favorite">
       {  
           Object.keys(favoriteCards).length > 0 ?  (
             Object.keys(favoriteCards).map((id) => (

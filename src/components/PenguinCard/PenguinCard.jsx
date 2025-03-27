@@ -15,7 +15,7 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
       setIsFavorite(true);
     }
   }
-
+  
   checkFav();
   const addFavorite = () => {
     if (localStorage.getItem('favorites') === null) {

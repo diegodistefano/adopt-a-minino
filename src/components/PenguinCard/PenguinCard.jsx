@@ -3,9 +3,9 @@ import "./PenguinCard.css";
 import PenguinButton from "../PenguinButton/PenguinButton";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const PenguinCard = ({ urlImagen, id, breed, description }) => {
+const PenguinCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const checkFav = () => {
     if (localStorage.getItem("favorites") === null) {
       localStorage.setItem("favorites", JSON.stringify({}));
@@ -37,6 +37,7 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
     delete favorites[id];
     localStorage.setItem('favorites', JSON.stringify(favorites));
     setIsFavorite(false);
+    fnc(favorites);
   };
 
   const shortDescription = description.split(".");

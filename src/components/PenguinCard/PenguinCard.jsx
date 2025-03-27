@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const PenguinCard = ({ urlImagen, id, breed, description }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const checkFav = () => {
     if (localStorage.getItem("favorites") === null) {
       localStorage.setItem("favorites", JSON.stringify({}));
@@ -63,7 +63,7 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
       <h5>{shortDescription[0]}.</h5>
       <PenguinButton
         text="Adoptame"
-        onClick={() => navigate(`/adopt?breed=${breed}`)} 
+        onClick={() => navigate(`/adopt?breed=${breed}`)}
       />
     </div>
   );

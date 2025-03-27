@@ -9,17 +9,17 @@ const FavoritePage = () => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) ?? {};
     setFavoriteCards(favorites);
   }, []);
-  
+
   return (
-      <div className="container-favorite">
-      {  
-          Object.keys(favoriteCards).length > 0 ?  (
-            Object.keys(favoriteCards).map((id) => (
-                <PenguinCard urlImagen={favoriteCards[id]} id={id} breed={"raza"} description={"descrip"}  />
-            ))
-                ) : (
-            <p>No tienes pingüinos favoritos.</p>
-            )}
+    <div className="container-favorite">
+      {
+        Object.keys(favoriteCards).length > 0 ? (
+          Object.keys(favoriteCards).map((id) => (
+            <PenguinCard key={favoriteCards[id]} urlImagen={favoriteCards[id].urlImagen} id={id} breed={favoriteCards[id].breed} description={favoriteCards[id].description} />
+          ))
+        ) : (
+          <p>No tienes mininos favoritos.</p>
+        )}
     </div>
   );
 };

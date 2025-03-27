@@ -62,8 +62,9 @@ const PenguinCard = ({ urlImagen, id, breed, description }) => {
       <h3>{breed}</h3>
       <h5>{shortDescription[0]}.</h5>
       <PenguinButton
-        text="Adoptame"
-        onClick={() => navigate(`/adopt?breed=${breed}`)} 
+        text="Adóptame"
+        onClick={() => navigate(`/adopt?breed=${breed}&image=${urlImagen}`)}	
+        color="btn-adopt" 
       />
     </div>
   );

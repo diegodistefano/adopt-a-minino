@@ -35,3 +35,17 @@
     cursor: pointer;
     /* z-index: 1000; */
 }
+
+
+.btn-adopt{
+   
+    border-radius: 5px;
+    border: solid 0px;
+    background-color: var(--secundary-color);
+    cursor: pointer;
+    padding: 5px;
+    font-weight: 700;
+    margin-top: auto; 
+    margin-bottom: 5%;
+
+  }

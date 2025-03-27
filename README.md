@@ -13,10 +13,16 @@ Para hacer realidad este sitio web, hemos utilizado:
 
 <img height="50" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"><img height="50" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"> → Para estructurar y estilizar la plataforma  </br>
 <img height="50" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"> → Para establecer la lógica </br>
+<img src="https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg" width="120" alt="React Icons"> → Sip, React con un corazón!!! </br>
 
 <img height="50" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png"> → El entorno de desarrollo más amigable </br>
 <img height="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png"><img height="50" src="https://user-images.githubusercontent.com/25181517/192108374-8da61ba1-99ec-41d7-80b8-fb2f7c0a4948.png">  → Para ordenar todo el trabajo en equipo (lo más importante)  </br>
 
+Y testing con Babel y Jest.
+
+
+
+## Continuamos con la adopción:
 
 
 🚀 ¿Cómo usar Adopt a Minino?
@@ -37,7 +43,7 @@ Si quieres clonar este proyecto y ejecutarlo en tu entorno local, sigue estos pa
 
 # Clona el repositorio
 ```bash
-git clone https://github.com/tuusuario/adopt-a-minino.git
+git clone https://github.com/diegodistefano/adopt-a-minino.git
 ```
 # Accede al directorio del proyecto
 ```bash

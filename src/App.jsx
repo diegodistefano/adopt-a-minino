@@ -13,7 +13,7 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <div>
+      <div id="container-app">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/adopt" element={<AdoptPage />} />

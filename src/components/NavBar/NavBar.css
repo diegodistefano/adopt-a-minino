@@ -16,9 +16,13 @@ nav img {
 
 .navlinks {
     display: flex;
-    justify-content: space-around;
+    justify-content: right;
     width: 20%;
     font-family: 'DynaPuff', system-ui;
+}
+
+.navlinks a {
+    margin: 0 5px;
 }
 
 #toggleSlider {
@@ -57,4 +61,8 @@ nav img {
     margin-left: 10px;
     font-size: 16px;
     transition: color 0.3s;
+}
+
+#themeSlider {
+    display: flex;
 }

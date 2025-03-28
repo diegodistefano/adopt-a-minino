@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CatSlide.css";
-import { useState, useEffect } from "react";
 import { getCats } from "../../service/catService";
 import CatCard from "../CatCard/CatCard.jsx";
 import CatButton from "../CatButton/CatButton.jsx";
@@ -9,34 +8,41 @@ const CatSlide = () => {
   const [dataCat, setDataCat] = useState([]);
   const [indexImage, setIndexImage] = useState(0);
   const [catDisplayed, setCatDisplayed] = useState([]);
+  const [numCards, setNumCards] = useState(window.innerWidth < 768 ? 1 : 3);
 
   useEffect(() => {
     const loadData = async () => {
-      const dataCat = await getCats();
-      setDataCat(dataCat);
-      setCatDisplayed(dataCat.slice(indexImage, indexImage + 3));
-      setIndexImage(indexImage + 3);
+      const data = await getCats();
+      setDataCat(data);
     };
-
-    if (indexImage > 0) {
-      return;
-    }
     loadData();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setNumCards(window.innerWidth < 768 ? 1 : 3);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    setCatDisplayed(dataCat.slice(indexImage, indexImage + numCards));
+  }, [dataCat, indexImage, numCards]);
+
   const nextImages = () => {
-    setCatDisplayed(dataCat.slice(indexImage, indexImage + 3));
-    setIndexImage(indexImage + 3);
+    setIndexImage((prev) => prev + numCards);
   };
 
   const previousImages = () => {
-    setCatDisplayed(dataCat.slice(indexImage - 6, indexImage - 3));
-    setIndexImage(indexImage - 3);
+    if (indexImage - numCards < 0) return;
+    setIndexImage((prev) => prev - numCards);
   };
 
   return (
     <div className="container-buttons">
-      {indexImage > 3 ? (
+      {indexImage > 0 ? (
         <CatButton
           text={<i className="fa-solid fa-caret-left"></i>}
           onClick={previousImages}
@@ -49,26 +55,16 @@ const CatSlide = () => {
       )}
       <div className="container-carrusel">
         {catDisplayed.map((cat) => (
-          <>
-            <CatCard
-              key={cat.id}
-              urlImagen={cat.url}
-              id={cat.id}
-              breed={
-                cat.breeds[0] === undefined
-                  ? "Desconocida"
-                  : cat.breeds[0].name
-              }
-              description={
-                cat.breeds[0]=== undefined
-                  ? "Sin descripción"
-                  : cat.breeds[0].description
-              }
-            />
-          </>
+          <CatCard
+            key={cat.id}
+            urlImagen={cat.url}
+            id={cat.id}
+            breed={cat.breeds[0]?.name || "Desconocida"}
+            description={cat.breeds[0]?.description || "Sin descripción"}
+          />
         ))}
       </div>
-      {indexImage < dataCat.length ? (
+      {indexImage + numCards < dataCat.length ? (
         <CatButton
           text={<i className="fa-solid fa-caret-right"></i>}
           onClick={nextImages}

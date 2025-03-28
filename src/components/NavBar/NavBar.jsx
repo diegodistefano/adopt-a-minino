@@ -15,8 +15,10 @@ const NavBar = () => {
       <div className="navlinks">
         <NavLink to="/adopt"><CatButton text="ADÓPTAME" color="btn-nav btn" />{" "} </NavLink>
         <NavLink to="/favorite"><CatButton text="FAVORITO" color="btn-nav btn" />{" "} </NavLink>
-        <label htmlFor="toggleSlider" id="sliderLabel">{theme === 'light' ? "🌞" : "🌙"} </label>
-        <input type="checkbox" id="toggleSlider" onClick={toggleTheme} />
+        <div id="themeSlider">
+          <label htmlFor="toggleSlider" id="sliderLabel">{theme === 'light' ? "🌞" : "🌙"} </label>
+          <input type="checkbox" id="toggleSlider" onClick={toggleTheme} />
+        </div>
       </div>
     </nav>
   );

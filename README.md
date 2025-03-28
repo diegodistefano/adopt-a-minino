@@ -6,6 +6,22 @@ Bienvenidos a **Adopt a Minino**, una plataforma donde encontrarás una gran var
 
 ✨ **Porque todos los gatos merecen un hogar lleno de amor.** 🏠❤️
 
+## 👥 Equipo de desarrollo
+
+Este proyecto fue desarrollado con mucho amor por:
+
+- **Diego**  como *Scrum Master* - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin)](https://www.linkedin.com/in/diegodistefano/)
+- **Saray** - *Product Owner* - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin)](https://www.linkedin.com/in/saray-miguel-narganes/)
+- **José** como *Developer* - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin)](https://www.linkedin.com/in/jose-manuel-barreiro-álvarez/)  
+
+## 🧠 Organización del Grupo
+
+Para mantenernos organizados y coordinados como equipo, utilizamos **[Trello](https://trello.com/)** como nuestra herramienta principal de gestión de tareas.  
+En nuestro tablero de Trello, cada miembro del grupo puede:
+
+- 🗂️ Ver las tareas asignadas y en progreso  
+- ✅ Marcar tareas como completadas  
+- 📌 Priorizar actividades importantes  
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -18,7 +34,7 @@ Para hacer realidad este sitio web, hemos utilizado:
 <img height="50" src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png"> → El entorno de desarrollo más amigable </br>
 <img height="50" src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png"><img height="50" src="https://user-images.githubusercontent.com/25181517/192108374-8da61ba1-99ec-41d7-80b8-fb2f7c0a4948.png">  → Para ordenar todo el trabajo en equipo (lo más importante)  </br>
 
-Y testing con Babel y Jest.
+Y testing con **Babel**y **Jest**.
 
 
 
@@ -57,16 +73,6 @@ npm install
 ```bash
 npm run dev
 ```
-
-
-## 👥 Equipo de desarrollo
-
-Este proyecto fue desarrollado con mucho amor por:
-
-
-- **José** - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin)](https://www.linkedin.com/in/jose-manuel-barreiro-álvarez/)  
-- **Diego** - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin)](https://www.linkedin.com/in/diegodistefano/)
-- **Saray** - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin)](https://www.linkedin.com/in/saray-miguel-narganes/)  
 
 📄 Licencia
 

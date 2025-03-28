@@ -1,20 +1,20 @@
 import React from "react";
-import "./PenguinSlide.css";
+import "./CatSlide.css";
 import { useState, useEffect } from "react";
-import { getPenguins } from "../../service/penguinService";
-import PenguinCard from "../PenguinCard/PenguinCard.jsx";
-import PenguinButton from "../PenguinButton/PenguinButton.jsx";
+import { getCats } from "../../service/catService";
+import CatCard from "../CatCard/CatCard.jsx";
+import CatButton from "../CatButton/CatButton.jsx";
 
-const PenguinSlide = () => {
-  const [dataPenguin, setDataPenguin] = useState([]);
+const CatSlide = () => {
+  const [dataCat, setDataCat] = useState([]);
   const [indexImage, setIndexImage] = useState(0);
-  const [penguinDisplayed, setPenguinDisplayed] = useState([]);
+  const [catDisplayed, setCatDisplayed] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
-      const dataPenguin = await getPenguins();
-      setDataPenguin(dataPenguin);
-      setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));
+      const dataCat = await getCats();
+      setDataCat(dataCat);
+      setCatDisplayed(dataCat.slice(indexImage, indexImage + 3));
       setIndexImage(indexImage + 3);
     };
 
@@ -25,19 +25,19 @@ const PenguinSlide = () => {
   }, []);
 
   const nextImages = () => {
-    setPenguinDisplayed(dataPenguin.slice(indexImage, indexImage + 3));
+    setCatDisplayed(dataCat.slice(indexImage, indexImage + 3));
     setIndexImage(indexImage + 3);
   };
 
   const previousImages = () => {
-    setPenguinDisplayed(dataPenguin.slice(indexImage - 6, indexImage - 3));
+    setCatDisplayed(dataCat.slice(indexImage - 6, indexImage - 3));
     setIndexImage(indexImage - 3);
   };
 
   return (
     <div className="container-buttons">
       {indexImage > 3 ? (
-        <PenguinButton
+        <CatButton
           text={<i class="fa-solid fa-caret-left"></i>}
           onClick={previousImages}
           color="button-arrows btn"
@@ -48,28 +48,28 @@ const PenguinSlide = () => {
         </div>
       )}
       <div className="container-carrusel">
-        {penguinDisplayed.map((penguin) => (
+        {catDisplayed.map((cat) => (
           <>
-            <PenguinCard
-              key={penguin.id}
-              urlImagen={penguin.url}
-              id={penguin.id}
+            <CatCard
+              key={cat.id}
+              urlImagen={cat.url}
+              id={cat.id}
               breed={
-                penguin.breeds[0] === undefined
+                cat.breeds[0] === undefined
                   ? "Desconocida"
-                  : penguin.breeds[0].name
+                  : cat.breeds[0].name
               }
               description={
-                penguin.breeds[0]=== undefined
+                cat.breeds[0]=== undefined
                   ? "Sin descripción"
-                  : penguin.breeds[0].description
+                  : cat.breeds[0].description
               }
             />
           </>
         ))}
       </div>
-      {indexImage < dataPenguin.length ? (
-        <PenguinButton
+      {indexImage < dataCat.length ? (
+        <CatButton
           text={<i class="fa-solid fa-caret-right"></i>}
           onClick={nextImages}
           color="button-arrows btn"
@@ -83,4 +83,4 @@ const PenguinSlide = () => {
   );
 };
 
-export default PenguinSlide;
+export default CatSlide;

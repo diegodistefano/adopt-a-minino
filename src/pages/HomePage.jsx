@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import PenguinSlide from "./../components/PenguinSlide/PenguinSlide";
+import CatSlide from "./../components/CatSlide/CatSlide";
 import { ThemeContext } from "../components/ThemeContext/ThemeContext";
 
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className={`${theme === 'light' ? 'container-home' : 'container-home dark-mode'}`}>
       <h2>Adopta un minino</h2>
       <h4>💞¡Ellos están esperándote!💞</h4>
-      <PenguinSlide />
+      <CatSlide />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import PenguinCard from "./../components/PenguinCard/PenguinCard";
+import CatCard from "./../components/CatCard/CatCard";
 import { useState, useEffect } from "react";
 import "./page.css";
 
@@ -19,7 +19,7 @@ const FavoritePage = () => {
       {
         Object.keys(favoriteCards).length > 0 ? (
           Object.keys(favoriteCards).map((id) => (
-            <PenguinCard key={favoriteCards[id]} urlImagen={favoriteCards[id].urlImagen} id={id} breed={favoriteCards[id].breed} description={favoriteCards[id].description} fnc={removeFav}/>
+            <CatCard key={favoriteCards[id]} urlImagen={favoriteCards[id].urlImagen} id={id} breed={favoriteCards[id].breed} description={favoriteCards[id].description} fnc={removeFav}/>
           ))
         ) : (
           <p>No tienes mininos favoritos.</p>

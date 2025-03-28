@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 
 // Mock del botón personalizado
-jest.mock('../PenguinButton/PenguinButton', () => ({ text, onClick }) => (
+jest.mock('../CatButton/CatButton', () => ({ text, onClick }) => (
   <button onClick={onClick}>{text}</button>
 ));
 

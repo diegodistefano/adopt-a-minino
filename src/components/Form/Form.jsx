@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useRef, useState, render } from "react";
 import "./Form.css";
-import PenguinButton from "../PenguinButton/PenguinButton";
+import CatButton from "../CatButton/CatButton";
 import { useNavigate } from "react-router-dom";
 
 function Form() {
@@ -103,7 +103,7 @@ function Form() {
               <p>
                 <img src="./../favicon.png" />
               </p>
-              <PenguinButton onClick={closePopup} text="Cerrar"></PenguinButton>
+              <CatButton onClick={closePopup} text="Cerrar"></CatButton>
             </div>
           </div>
         )}

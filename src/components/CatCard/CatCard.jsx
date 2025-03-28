@@ -1,9 +1,9 @@
 import React from "react";
-import "./PenguinCard.css";
-import PenguinButton from "../PenguinButton/PenguinButton";
+import "./CatCard.css";
+import CatButton from "../CatButton/CatButton";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const PenguinCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => {
+const CatCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const navigate = useNavigate();
   const checkFav = () => {
@@ -46,13 +46,13 @@ const PenguinCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => 
     <div className={`card`}>
       <div className="card-favorite">
         {isFavorite ? (
-          <PenguinButton
+          <CatButton
             color="btn-favorite"
             text={<i className="fa-solid fa-heart"></i>}
             onClick={removeFavorite}
           />
         ) : (
-          <PenguinButton
+          <CatButton
             color="btn-favorite"
             text={<i className="fa-regular fa-heart"></i>}
             onClick={addFavorite}
@@ -62,7 +62,7 @@ const PenguinCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => 
       <img src={urlImagen} alt={breed} />
       <h3>{breed}</h3>
       <h5>{shortDescription[0]}.</h5>
-      <PenguinButton
+      <CatButton
         text="Adóptame"
         onClick={() => navigate(`/adopt?breed=${breed}&image=${urlImagen}`)}	
         color="btn-adopt" 
@@ -71,4 +71,4 @@ const PenguinCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => 
   );
 };
 
-export default PenguinCard;
+export default CatCard;

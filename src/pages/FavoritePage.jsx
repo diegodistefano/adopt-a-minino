@@ -22,7 +22,7 @@ const FavoritePage = () => {
             <CatCard key={favoriteCards[id]} urlImagen={favoriteCards[id].urlImagen} id={id} breed={favoriteCards[id].breed} description={favoriteCards[id].description} fnc={removeFav}/>
           ))
         ) : (
-          <p>No tienes mininos favoritos.</p>
+          <h4>No tienes mininos favoritos.</h4>
         )}
     </div>
   );

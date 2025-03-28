@@ -38,13 +38,13 @@ const CatSlide = () => {
     <div className="container-buttons">
       {indexImage > 3 ? (
         <CatButton
-          text={<i class="fa-solid fa-caret-left"></i>}
+          text={<i className="fa-solid fa-caret-left"></i>}
           onClick={previousImages}
           color="button-arrows btn"
         />
       ) : (
         <div className="fill-button">
-          <i class="fa-solid fa-caret-left"></i>
+          <i className="fa-solid fa-caret-left"></i>
         </div>
       )}
       <div className="container-carrusel">
@@ -70,13 +70,13 @@ const CatSlide = () => {
       </div>
       {indexImage < dataCat.length ? (
         <CatButton
-          text={<i class="fa-solid fa-caret-right"></i>}
+          text={<i className="fa-solid fa-caret-right"></i>}
           onClick={nextImages}
           color="button-arrows btn"
         />
       ) : (
         <div className="fill-button">
-          <i class="fa-solid fa-caret-right"></i>
+          <i className="fa-solid fa-caret-right"></i>
         </div>
       )}
     </div>

@@ -4,19 +4,16 @@ import Form from './Form';
 import { MemoryRouter } from 'react-router-dom';
 
 
-// Mock del botón personalizado
 jest.mock('../CatButton/CatButton', () => ({ text, onClick }) => (
   <button onClick={onClick}>{text}</button>
 ));
 
-// Mock de useNavigate
 const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => mockNavigate,
 }));
 
-// Mock de location.search (params)
 const createLocation = (search = '') => {
   delete window.location;
   window.location = new URL(`http://localhost/${search}`);

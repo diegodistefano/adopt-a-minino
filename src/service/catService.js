@@ -1,8 +1,6 @@
 const API_KEY = "live_kg452T34tBZDb4oN4wyKXi6QA8VukzL4WhepLyeQB0srFoRbz1XIPi9oHSE6UNcI";
 const URL_API = "https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=true";
 
-
-
 export async function getCats() {
     const response = await fetch(URL_API, {
       method: "GET",

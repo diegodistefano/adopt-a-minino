@@ -28,18 +28,15 @@
 }
 
 .btn-favorite {
-    /* position: fixed; */
     font-size: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    /* z-index: 1000; */
 }
 
-
 .btn-adopt{
-   
     border-radius: 5px;
+    font-size:20px;
     border: solid 0px;
     background-color: var(--secundary-color);
     cursor: pointer;
@@ -47,5 +44,4 @@
     font-weight: 700;
     margin-top: auto; 
     margin-bottom: 5%;
-
-  }
+}

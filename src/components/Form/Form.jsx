@@ -1,12 +1,11 @@
 import { useForm } from "react-hook-form";
-import { useRef, useState, render } from "react";
+import { useRef, useState} from "react";
 import "./Form.css";
 import CatButton from "../CatButton/CatButton";
 import { useNavigate } from "react-router-dom";
 
 function Form() {
   const navigate = useNavigate();
-  const renderCount = useRef(0);
   const {
     register,
     handleSubmit,
@@ -25,7 +24,6 @@ function Form() {
   };
 
   const onValid = (data) => {
-    console.log(data);
     openPopup();
   };
 

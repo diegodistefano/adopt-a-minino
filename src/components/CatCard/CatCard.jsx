@@ -40,7 +40,8 @@ const CatCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => {
     fnc(favorites);
   };
 
-  const shortDescription = description.split(".");
+  let shortDescription = description.split(".");
+  shortDescription = shortDescription[0].lenght > 10 ? shortDescription[0].slice(0, 10) : shortDescription[0]
 
   return (
     <div className={`card`}>
@@ -61,11 +62,11 @@ const CatCard = ({ urlImagen, id, breed, description, fnc = () => { } }) => {
       </div>
       <img src={urlImagen} alt={breed} />
       <h3>{breed}</h3>
-      <h5>{shortDescription[0]}.</h5>
+      <h5>{shortDescription}.</h5>
       <CatButton
         text="Adóptame"
-        onClick={() => navigate(`/adopt?breed=${breed}&image=${urlImagen}`)}	
-        color="btn-adopt" 
+        onClick={() => navigate(`/adopt?breed=${breed}&image=${urlImagen}`)}
+        color="btn-adopt"
       />
     </div>
   );
